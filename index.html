@@ -19,15 +19,32 @@ body, html {
 </style>
 
 <body>
-<div id="uay"></div>
+<div id="uay" onmousedown="handlemouse(event)"></div>
 </body>
 
 <script>
-	console.log("UAYYYYYY");
-	document.getElementById("uay").addEventListener("click", () =>
-	{
-		var audio = new Audio('UAY.ogg');
-		audio.play();
+  function handlemouse(event)
+  {
+    console.log("UAYYYYYY");
 
-	});
+    if (event.button == 0)
+    {
+      console.log('1');
+      var audio = new Audio('UAY.ogg');
+		  audio.play();
+    } 
+    else if (event.button == 1)
+    {
+      console.log("may you rest in peace");
+      window.setInterval(function(){
+        var audio = new Audio('uayway.ogg');
+  		  audio.play();
+      }, 1000);
+    }
+    else if (event.button == 2)
+    {
+      var audio = new Audio('uayhu.ogg');
+		  audio.play();
+    }
+  }	
 </script>
