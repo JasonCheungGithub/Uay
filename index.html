@@ -1,0 +1,33 @@
+<style type="text/css">
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+#uay {
+  /* The image used */
+  background-image: url(uay.jpg);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+
+<body>
+<div id="uay"></div>
+</body>
+
+<script>
+	console.log("UAYYYYYY");
+	document.getElementById("uay").addEventListener("click", () =>
+	{
+		var audio = new Audio('uay.ogg');
+		audio.play();
+
+	});
+</script>
